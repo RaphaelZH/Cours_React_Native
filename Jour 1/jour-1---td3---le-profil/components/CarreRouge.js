@@ -1,15 +1,17 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 export default function CarreRouge() {
   return (
-    <View style={styles.circle}>
+    <View>
+      <TouchableOpacity style = {styles.button} onPress = {() => console.log ('Pressed')}>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = {
-  circle: {
+  button: {
     height: '20vw',
     width: '20vw',
     borderRadius: '5vw',

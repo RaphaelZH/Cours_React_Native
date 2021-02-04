@@ -3,7 +3,6 @@ import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 // You can import from local files
-import AssetExample from './components/AssetExample';
 import CarreRouge from "./components/CarreRouge";
 import ProfileImage from'./components/ProfileImage';
 import RectangleBleu from'./components/RectangleBleu';
@@ -12,7 +11,7 @@ import RectangleBleu from'./components/RectangleBleu';
 
 export default function App() {
   return (
-    <View style={{flex: 1}}>
+    <View style={[styles.container, {flex: 1}]}>
     <View style={{
         flex: 1,
         flexDirection: 'column',
@@ -46,7 +45,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: "center",
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#FFFFFF',
     padding: 8,
