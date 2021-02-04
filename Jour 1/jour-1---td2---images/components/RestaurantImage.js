@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 
-import Restaurant from "../restaurant.jpg";
+import Restaurant from "../assets/restaurant.jpg";
 
 export default function RestaurantImage() {
   return (
