@@ -13,7 +13,10 @@ export default function App() {
   return (
     <ScrollView  style={styles.container}>
       <View style= {{flexDirection: "row", justifyContent: "space-between", alignItems: "center", margin: "2vw"}}>
-      <Text style={styles.paragraph}>le {date}</Text>
+        <View style= {{flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start", margin: "2vw"}}>
+          <Text style={[styles.paragraph, {fontSize: '2.5vh'}]}>le {date}</Text>
+          <Text style={[styles.paragraph, {color: 'royalblue'}]}>Aujourd'hui</Text>
+        </View>
       <ProfileImage/>
       </View>
       <Fiche title = "Super Mario Bros" description= "Les 35 ans de Super Mario Bros. ne sont pas terminés, retrouvez ici nos nouvelles annonces !" picture = "https://cdn03.nintendo-europe.com/media/images/10_share_images/news_9/2021_1/january_13/H2x1_NSwitch_MarioNSwitchHardware_image950w.jpg"/>

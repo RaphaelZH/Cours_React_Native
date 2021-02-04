@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: "left",
     color: "steelblue",
-
   },
   picture: {
     width: '100%',
@@ -56,8 +55,3 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
 });
-
-
-
-
-//'https://avatars.githubusercontent.com/u/32324353?s=400&u=9018b1ce1241fd1380278c5eca63c4bc990f9e81&v=4'
