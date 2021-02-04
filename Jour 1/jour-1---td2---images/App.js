@@ -3,7 +3,6 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import Constants from 'expo-constants';
 
 // You can import from local files
-import AssetExample from './components/AssetExample';
 import RoundImage from "./components/RoundImage";
 import RestaurantImage from "./components/RestaurantImage";
 

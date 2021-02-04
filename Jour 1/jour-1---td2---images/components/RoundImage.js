@@ -13,24 +13,8 @@ export default function RoundImage() {
 
 const styles = StyleSheet.create({
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 25
+    width: '40vw',
+    height: '40vw',
+    borderRadius: '20wv'
   },
-  container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 24,
-  },
-  paragraph: {
-    margin: 24,
-    marginTop: 0,
-    fontSize: 14,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  logo: {
-    height: 128,
-    width: 128,
-  }
 });
