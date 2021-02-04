@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 
-export default function RoundImage() {
+export default function ProfileImage() {
   return (
     <Image 
     style={styles.image}
@@ -13,8 +13,9 @@ export default function RoundImage() {
 
 const styles = StyleSheet.create({
   image: {
-    width: '40vw',
-    height: '40vw',
-    borderRadius: '20vw'
-  },
+    width: "20vw",
+    height: "20vw",
+    borderRadius: "10vw",
+    padding: 0,
+  }
 });
