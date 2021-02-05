@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   title:{
     marginRight: '3vw',
     marginLeft: '3vw',
-    fontSize: '3vh',
+    fontSize: '2.5vh',
     fontWeight: 'bold',
     textAlign: 'center',
     color: "silver",
