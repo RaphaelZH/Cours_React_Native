@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     color: "steelblue",
   },
   picture: {
-    width: '100%',
+    width: 'auto',
     height: "100%",
     justifyContent: 'flex-start',
     resizeMode: "cover",
