@@ -12,6 +12,7 @@ import Icon from './components/Icon'
 export default function App() {
   return (
     <View style={styles.container}>
+      <ScrollView style = {{flexGrow: 0, backgroundColor: "beige", justifyContent: "space-around"}} horizontal = {true}>
       <Icon
         url_color   = {require('./assets/Color/camera.png')}
         url_outline = {require('./assets/Outline/camera.png')}
@@ -54,10 +55,11 @@ export default function App() {
         url_outline = {require('./assets/Outline/tv.png')}
         title       = 'TV'
        />
-       <Icon
+      <Icon
         url_color   = {require('./assets/Color/weather.png')}
         url_outline = {require('./assets/Outline/weather.png')}
         title       = 'Weather'/>
+    </ScrollView>
     </View>
   );
 }
@@ -69,13 +71,6 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
     padding: 8,
-  },
-  paragraph: {
-    color: "blue",
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
 

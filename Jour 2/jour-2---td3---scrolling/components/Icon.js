@@ -1,12 +1,20 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableWithoutFeedback} from 'react-native';
 
 
+export default function Icon ({url_color = "", url_outline = "", title}) {
 
-export default function Icon ({isSelected, url_color = "", url_outline = "", title}) {
+  const [isSelected, setSelected] = React.useState(false);
+
+  const onPressButton = () => {
+    console.log ('Pressed')
+    setSelected(!isSelected);
+  }
+
   if (isSelected) {
     return (
-    <View style = {{flex: 1, flexDirection: "column"}}>
+    <TouchableWithoutFeedback onPress = {onPressButton}>
+    <View style = {{flexDirection: "column", padding: '5vw'}}>
       <View style = {[styles.contain, {backgroundColor: 'mintcream'}]}>
         <Image style = {styles.icon}
           source = {url_color} />
@@ -15,18 +23,21 @@ export default function Icon ({isSelected, url_color = "", url_outline = "", tit
         <Text style = {[styles.title, {color: "steelblue"}]}>{title}</Text>
       </View>
     </View>
+    </TouchableWithoutFeedback>
     );
   }
   return (
-    <View style = {{flex: 1, flexDirection: "column"}}>
-      <View style = {[styles.contain]}>
+    <TouchableWithoutFeedback onPress = {onPressButton}>
+    <View style = {{flexDirection: "column", padding: '5vw'}}>
+      <View style = {[styles.contain, {}]}>
         <Image style = {styles.icon}
           source = {url_outline} />
       </View>
       <View style = {{width: '30vw'}}>
-        <Text style = {[styles.title]}>{title}</Text>
+        <Text style = {[styles.title, {}]}>{title}</Text>
       </View>
     </View>
+    </TouchableWithoutFeedback>
     );
   }
 
@@ -34,7 +45,7 @@ const styles = StyleSheet.create({
   contain: {
     width: '30vw',
     height: '30vw',
-    borderRadius: '3vw',
+    borderRadius: '7vw',
     overflow: "hidden",
     resizeMode: "contain",
     justifyContent: 'flex-start',
