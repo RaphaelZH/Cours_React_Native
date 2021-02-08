@@ -24,7 +24,7 @@ export default function Fiche({title = "", description = "", picture = ""}) {
       </TouchableOpacity>
     </View>
     );
-    }
+    } else
   {
     return (
 
