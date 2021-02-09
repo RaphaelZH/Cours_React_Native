@@ -23,7 +23,16 @@ export default function App() {
     setNumber(number + 1);
     newTab.push({billeColor: 'yellow', numberOfBille: number });
     setTable(newTab);
-    console.log(number, table.billeColor);
+    console.log(number);
+    }
+
+  const subBille = () => {
+
+    const newTab = [...table];
+    setNumber(number - 1);
+    newTab.pop();
+    setTable(newTab);
+    console.log(number);
     }
 
   return (
@@ -35,6 +44,7 @@ export default function App() {
       {table.map(element => <Bille color={element.billeColor} nb={element.numberOfBille}/> ) }
       </ View>
       <Button title = 'ADD' onPress = {addBille}/>
+      <Button title = 'SUBTRACTION' onPress = {subBille}/>
     </View>
   );
 }

@@ -10,7 +10,7 @@ import Barre from './components/Barre';
 // or any pure javascript modules available in npm
 
 export default function App() {
-  const [number, setNumber]         = React.useState(0);
+  const [number, setNumber]         = React.useState(5);
   const [barrewidth, setBarrewidth] = React.useState(0);
 
   const progresse = () => {
@@ -26,7 +26,7 @@ export default function App() {
   }
 
   const reset = () => {
-    setNumber    (0);
+    setNumber    (5);
     setBarrewidth(0);
   }
 
