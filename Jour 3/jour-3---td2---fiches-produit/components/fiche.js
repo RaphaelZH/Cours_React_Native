@@ -29,7 +29,7 @@ export default function Fiche({title = "", description = "", picture = ""}) {
     return (
 
     <View style = {{flex : 1, flexDirection: "column"}}>
-      <TouchableOpacity style = {[styles.fiche, {borderColor: "lightskyblue"}]} onPress = {onPressButton}>
+      <TouchableOpacity style = {[styles.fiche, {borderColor: "lightgray"}]} onPress = {onPressButton}>
         <View style = {{flex : 5, overflow: "hidden"}}>
         <Image 
           style={styles.picture}
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     justifyContent: 'flex-start',
     backgroundColor: "#ffffff",
-    borderColor: "lightgray",
+    borderColor: "lightskyblue",
     borderWidth: '1vw',
     alignSelf: "center",
 
