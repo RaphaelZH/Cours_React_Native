@@ -41,6 +41,7 @@ export default function App() {
       <Text style={styles.paragraph}>
       Affichez moi plus de billes !
       </Text>
+      <Text style={styles.paragraph}>{number + 2}</Text>
       <View style = {{flexDirection: 'row', flexWrap: 'wrap'}}>
       {billes.map(element => <Bille color={element.billeColor} nb={element.numberOfBille}/> ) }
       </ View>
