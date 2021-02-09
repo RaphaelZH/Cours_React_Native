@@ -10,23 +10,25 @@ import Barre from './components/Barre';
 // or any pure javascript modules available in npm
 
 export default function App() {
-  const [number, setNumber]         = React.useState(5);
+  const [number, setNumber]         = React.useState(0);
   const [barrewidth, setBarrewidth] = React.useState(0);
 
   const progresse = () => {
-    setNumber(number + 5);
+    var newNumber  = number + 5;
+    setNumber(newNumber);
     if (number < 100) {
-      setBarrewidth((number / 100 * 50) + 'vw');
-      console.log(number, barrewidth);
+      var newWidth = ((newNumber / 100 * 50) + 'vw');
+      
     } else
     {
-      setBarrewidth('50vw');
-      console.log(number, barrewidth);
+      newWidth = '50vw'
     }
+    setBarrewidth(newWidth)
+    console.log(newNumber, newWidth);
   }
 
   const reset = () => {
-    setNumber    (5);
+    setNumber    (0);
     setBarrewidth(0);
   }
 
