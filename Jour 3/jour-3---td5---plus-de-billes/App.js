@@ -9,30 +9,31 @@ import Button from './components/Button'
 // or any pure javascript modules available in npm
 
 export default function App() {
-  const [number, setNumber] = React.useState(4);
-  const billeInfo = [
+  const [number, setNumber] = React.useState(1);
+  const [billes, setBilles] = React.useState([
     { billeColor: 'orangered', numberOfBille: 1 }, 
     { billeColor: 'orange',    numberOfBille: 2 }, 
     { billeColor: 'gold',      numberOfBille: 3 }
-  ];
-  const [table, setTable] = React.useState(billeInfo);
+  ]
+  );
 
-  const addBille = () => {
-
-    const newTab = [...table];
+  const increment = () => {
+    const newBilles = [...billes];
+    newBilles.push(
+      {
+        billeColor: billes[number - 1].billeColor,
+        numberOfBille: number + 3
+      }
+      );
     setNumber(number + 1);
-    newTab.push({billeColor: 'yellow', numberOfBille: number });
-    setTable(newTab);
-    console.log(number);
-    }
+    setBilles(newBilles)
+  }
 
-  const subBille = () => {
-
-    const newTab = [...table];
+  const decrement = () => {
+    const newBilles = [...billes];
+    newBilles.pop()
     setNumber(number - 1);
-    newTab.pop();
-    setTable(newTab);
-    console.log(number);
+    setBilles(newBilles)
     }
 
   return (
@@ -41,10 +42,10 @@ export default function App() {
       Affichez moi plus de billes !
       </Text>
       <View style = {{flexDirection: 'row', flexWrap: 'wrap'}}>
-      {table.map(element => <Bille color={element.billeColor} nb={element.numberOfBille}/> ) }
+      {billes.map(element => <Bille color={element.billeColor} nb={element.numberOfBille}/> ) }
       </ View>
-      <Button title = 'ADD' onPress = {addBille}/>
-      <Button title = 'SUBTRACTION' onPress = {subBille}/>
+      <Button title = 'Incrément' onPress = {increment}/>
+      <Button title = 'Décrément' onPress = {decrement}/>
     </View>
   );
 }
