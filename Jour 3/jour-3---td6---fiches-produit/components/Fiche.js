@@ -1,47 +1,19 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function Fiche({selection, title = "", description = "", picture = ""}) {
-  const [isSelected, setSelected] = React.useState(selection);
-
-  const onPressButton = () => {
-    console.log ('Pressed')
-    setSelected(!isSelected);
+export default function Fiche({isSelected, title = "", picture = "", onPressFiche}) {
+   const selectedStyle = {
+    borderColor: isSelected ? 'lightskyblue' : 'lightgray'
   }
 
-  if (isSelected) {
-    return (
-    <View style = {{flex : 1, flexDirection: "column"}}>
-      <TouchableOpacity style = {styles.fiche} onPress = {onPressButton}>
-        <View style = {{flex : 5, overflow: "hidden"}}>
-        <Image 
+  return (
+    <TouchableOpacity style={[styles.fiche, selectedStyle]} onPress={onPressFiche}>
+      <Image 
           style={styles.picture}
           source={{uri: picture}} />
-        </View>
-        <View style = {{flex : 1, overflow: "hidden"}}>
-          <Text style = {styles.title}>{title}</Text>
-        </View>
-      </TouchableOpacity>
-    </View>
-    );
-    } else
-  {
-    return (
-
-    <View style = {{flex : 1, flexDirection: "column"}}>
-      <TouchableOpacity style = {[styles.fiche, {borderColor: "lightgray"}]} onPress = {onPressButton}>
-        <View style = {{flex : 5, overflow: "hidden"}}>
-        <Image 
-          style={styles.picture}
-          source={{uri: picture}} />
-        </View>
-        <View style = {{flex : 1, overflow: "hidden"}}>
-          <Text style = {styles.title}>{title}</Text>
-        </View>
-      </TouchableOpacity>
-    </View>
+      <Text style = {styles.title}>{title}</Text>
+    </TouchableOpacity>
   );
-}
 }
 
 const styles = StyleSheet.create({
@@ -54,7 +26,6 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     justifyContent: 'flex-start',
     backgroundColor: "#ffffff",
-    borderColor: "lightskyblue",
     borderWidth: '1vw',
     alignSelf: "center",
 
